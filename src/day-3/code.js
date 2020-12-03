@@ -1,14 +1,13 @@
 import { input } from './input';
 
 export const solution1 = (input, downModifier, rightModifier) => {
-    const lineCount = input.length;
     const squarePerLine = input[0].length;
     let rightPos = 0;
     let downPos = 0;
     let treeCounter = 0;
 
-    while (downPos < lineCount) {
-        treeCounter += input[downPos % lineCount][rightPos % squarePerLine] === "#"
+    while (downPos < input.length) {
+        treeCounter += input[downPos][rightPos % squarePerLine] === "#"
             ? 1 : 0;
         rightPos += rightModifier;
         downPos += downModifier;
