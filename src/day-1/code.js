@@ -21,7 +21,7 @@ export const solution1 = input => {
     });
 
     return result; //?+
-}
+};
 
 export const solution2 = input => {
     const result = {
@@ -48,8 +48,7 @@ export const solution2 = input => {
     });
 
     return result; //?+
-}
-
+};
 
 solution1(input);
 solution2(input);
