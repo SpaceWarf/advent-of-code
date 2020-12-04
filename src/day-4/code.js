@@ -103,10 +103,6 @@ export const isPassportValid2 = passport => {
 export const isFieldValid = (field, value) => {
     const validator = fieldValidation[field];
     const checksValidity = [];
-
-    if (Object.keys(validator) === 0) {
-        return true;
-    }
     
     if (validator.regex) {
         checksValidity.push(validator.regex.test(value));
