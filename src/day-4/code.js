@@ -110,17 +110,17 @@ export const isFieldValid = (field, value) => {
     
     if (validator.regex) {
         checksValidity.push(validator.regex.test(value));
-    }
 
-    if (validator.intervalIfMatch) {
-        const result = value.match(validator.regex);
-
-        if (!result) {
-            return false;
-        }
+        if (validator.intervalIfMatch) {
+            const result = value.match(validator.regex);
     
-        const interval = validator.intervalIfMatch[result[2]];
-        checksValidity.push(parseInt(result[1]) >= interval.min && parseInt(result[1]) <= interval.max);
+            if (!result) {
+                return false;
+            }
+        
+            const interval = validator.intervalIfMatch[result[2]];
+            checksValidity.push(parseInt(result[1]) >= interval.min && parseInt(result[1]) <= interval.max);
+        }
     }
 
     if (validator.oneOf) {
