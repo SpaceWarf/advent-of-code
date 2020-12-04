@@ -4,7 +4,7 @@ import {
     solution2
 } from './code';
 
-describe('Day 1', () => {
+describe('Day 3', () => {
     it('Puzzle 1 should return the result 151', () => {
         expect(solution1(input, 1, 3)).toEqual(151);
     });

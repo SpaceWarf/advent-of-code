@@ -7,7 +7,7 @@ import {
     isPasswordValid2
 } from './code';
 
-describe('Day 1', () => {
+describe('Day 2', () => {
     it('Puzzle 1 should return the result 591', () => {
         expect(solution1(input)).toEqual(591);
     });
