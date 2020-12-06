@@ -48,7 +48,7 @@ export const solution1 = input => {
             return isPassportValid1(nextPassport)
                 ? count + 1
                 : count;
-        }, 0); //?+
+        }, 0);
 };
 
 export const solution2 = input => {
@@ -57,7 +57,7 @@ export const solution2 = input => {
             return isPassportValid2(nextPassport)
                 ? count + 1
                 : count;
-        }, 0); //?+
+        }, 0);
 };
 
 export const getPassportStrings = input => {
@@ -103,17 +103,17 @@ export const isPassportValid2 = passport => {
 export const isFieldValid = (field, value) => {
     const validator = fieldValidation[field];
     const checksValidity = [];
-    
+
     if (validator.regex) {
         checksValidity.push(validator.regex.test(value));
 
         if (validator.intervalIfMatch) {
             const result = value.match(validator.regex);
-    
+
             if (!result) {
                 return false;
             }
-        
+
             const interval = validator.intervalIfMatch[result[2]];
             checksValidity.push(parseInt(result[1]) >= interval.min && parseInt(result[1]) <= interval.max);
         }
@@ -138,5 +138,5 @@ export const isFieldValid = (field, value) => {
     return checksValidity.every(check => check);
 };
 
-solution1(input);
-solution2(input);
+solution1(input); //?+
+solution2(input); //?+

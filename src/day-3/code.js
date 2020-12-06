@@ -13,7 +13,7 @@ export const solution1 = (input, downModifier, rightModifier) => {
         downPos += downModifier;
     }
 
-    return treeCounter; //?+
+    return treeCounter;
 };
 
 export const solution2 = input => {
@@ -21,8 +21,8 @@ export const solution2 = input => {
         * solution1(input, 1, 3)
         * solution1(input, 1, 5)
         * solution1(input, 1, 7)
-        * solution1(input, 2, 1) //?+
+        * solution1(input, 2, 1);
 };
 
-solution1(input, 1, 3);
-solution2(input);
+solution1(input, 1, 3); //?+
+solution2(input); //?+

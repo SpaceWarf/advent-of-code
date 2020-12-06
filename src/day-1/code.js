@@ -20,7 +20,7 @@ export const solution1 = input => {
         }
     });
 
-    return result; //?+
+    return result;
 };
 
 export const solution2 = input => {
@@ -47,8 +47,8 @@ export const solution2 = input => {
         });
     });
 
-    return result; //?+
+    return result;
 };
 
-solution1(input);
-solution2(input);
+solution1(input); //?+
+solution2(input); //?+

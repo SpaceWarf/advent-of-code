@@ -7,7 +7,7 @@ export const solution1 = input => {
             return isPasswordValid1(policy)
                 ? count + 1
                 : count;
-        }, 0); //?+
+        }, 0);
 };
 
 export const solution2 = input => {
@@ -17,7 +17,7 @@ export const solution2 = input => {
             return isPasswordValid2(policy)
                 ? count + 1
                 : count;
-        }, 0); //?+
+        }, 0);
 };
 
 export const formatStringToPolicy = string => {
@@ -43,5 +43,5 @@ export const isPasswordValid2 = policy => {
     return !!(policy.password[policy.min - 1] === policy.letter ^ policy.password[policy.max - 1] === policy.letter);
 };
 
-solution1(input);
-solution2(input);
+solution1(input); //?+
+solution2(input); //?+
